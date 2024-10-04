@@ -8,6 +8,7 @@ export const scrapeAll = async (browserInstance) => {
         await scraperObject.scraper(browser);
 
     } catch (error) {
+        console.log(error);
        console.log("Could not resolve the browser instance"); 
     }
 }

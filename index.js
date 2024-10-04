@@ -23,6 +23,9 @@ server.use('*', (req, res, next) => {
 	next(error); 
 });
 
+//seed();
+
+
 server.use((error, req, res, next) => {
 	return res.status(error.status || 500).json(error.message || 'Unexpected error');
 }); 
