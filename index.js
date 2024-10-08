@@ -1,5 +1,3 @@
-import { startBrowser } from "./src/utils/browser.js";
-import { scrapeAll } from './src/api/controllers/pageController.js';
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from "./src/config/db.js";
@@ -33,13 +31,5 @@ server.use((error, req, res, next) => {
 server.listen(PORT, () => {
     console.log(`server listening on port ${PORT}`);
 });
-
-// Scrapper:
-let browserInstance = startBrowser();
-scrapeAll(browserInstance);
-
-
-
-
 
 
